@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>{% block title %}{% endblock %} - Python on Azure</title>
+    {% endblock %}
+</head>
+<body>
+    <main>
+        <div id="content" class="px-4 py-3 my-2 text-center">
+            {% block content %}
+            {% endblock %}
+        
+            <div id="footer">
+                {% block footer %}
+                &copy; Copyright {{ current_year }}
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+</body>
+</html>
